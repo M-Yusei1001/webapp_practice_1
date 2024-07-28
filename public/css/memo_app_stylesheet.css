@@ -1,0 +1,5 @@
+/* style.css */
+#taskList li {
+    list-style: none; /* リストの番号を消す */
+  }
+  

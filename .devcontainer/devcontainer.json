@@ -6,9 +6,11 @@
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/devcontainers-contrib/features/postgres-asdf:1": {}
-	}
+		"ghcr.io/devcontainers-contrib/features/postgres-asdf:1": {},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+	},
 
+	"forwardPorts": [5432]
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 

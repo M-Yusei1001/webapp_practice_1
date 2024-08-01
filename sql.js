@@ -1,4 +1,5 @@
 const pg = require('pg');
+const { connectionString } = require('pg/lib/defaults');
 
 const client = new pg.Pool({
   database: 'postgres',
@@ -13,14 +14,23 @@ const client = new pg.Pool({
   port: 5432,
 });
 
-//client.connect();
+client.connect((error) => {
+  if(error){
+    console.log("error connecting : " + error.stack);
+    return;
+  }
+  console.log("success");
+});
 
 client.query(
-  'SELECT * FROM mydb;',
-  (error, result) => {
+  'SELECT * FROM mydb',
+  (error, results) => {
     if(error){
       console.log(error);
     }else{
-      console.log(result);
-    };
-});
+      results.rows.forEach((item) => {
+        console.log(item.name);
+      });
+    }
+  }
+);

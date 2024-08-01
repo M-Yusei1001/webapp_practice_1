@@ -7,10 +7,30 @@
 
   <body>
     <h1>ToDoリスト</h1>
-    <input type="text" id="taskInput" placeholder="タスクを入力">
-    <button id="addButton">追加</button>
-    <ul id="taskList">
-      </ul>
-    <script src="/script/memo_app_script.js"></script>
+    <form action="/create" method="post">
+      <p>ID</p>
+      <input type="text" name="userid">
+      <p>名前</p>
+      <input type="text" name="name">
+      <p>商品名</p>
+      <input type="text" name="items">
+      <p>数</p>
+      <input type="text" name="quantity">
+      
+      <input type="submit" value="追加">
+    </form>
+    
+    <ul class="table">
+      <% items.forEach((item) => { %>
+        <li>
+          <div class="item-data">
+            <span><%= item.name %></span>
+            <span><%= item.items %></span>
+            <span><%= item.quantity %></span>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+
   </body>
 </html>

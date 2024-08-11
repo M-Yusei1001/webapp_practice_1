@@ -1,7 +1,7 @@
 const pg = require('pg');
 const { connectionString } = require('pg/lib/defaults');
 
-const client = new pg.Pool({
+const mydb = new pg.Pool({
   database: 'postgres',
   user: 'postgres',
   password: 'yusei1001',
@@ -14,23 +14,47 @@ const client = new pg.Pool({
   port: 5432,
 });
 
-client.connect((error) => {
-  if(error){
-    console.log("error connecting : " + error.stack);
-    return;
+const client = mydb.connect((err) => {
+  if(err){
+    console.error(err);
+  }else{
+    console.log("connected");
   }
-  console.log("success");
 });
 
-client.query(
-  'SELECT * FROM mydb',
-  (error, results) => {
-    if(error){
-      console.log(error);
-    }else{
-      results.rows.forEach((item) => {
-        console.log(item.name);
-      });
-    }
-  }
-);
+mydb.query()
+
+// async (res, rej) => {
+//   const client = await mydb.connect((err) => {
+//     if(err){
+//       console.error(err);
+//     }
+//   });
+
+//   const getFromSQL = await client.query(
+//     'SELECT * FROM pgpractice',
+//     (err, result) => {
+//       if(err){
+//         console.error(err);
+//       }else{
+//         console.log("get successed");
+//         console.log(result.rows);
+//       }
+//     }
+//   );
+
+//   const insertToSQL = await client.query(
+//     'INSERT INTO pgpractice (fruits) VALUES (?)',
+//     ["みかん"],
+//     (err, result) => {
+//       if(err){
+//         console.error(err);
+//       }else{
+//         console.log("insert successed");
+//       }
+//     }
+//   );
+
+//   getFromSQL;
+
+// }

@@ -8,25 +8,16 @@
   <body>
     <h1>ToDoリスト</h1>
     <form action="/create" method="post">
-      <p>ID</p>
-      <input type="text" name="userid">
-      <p>名前</p>
-      <input type="text" name="name">
-      <p>商品名</p>
-      <input type="text" name="items">
-      <p>数</p>
-      <input type="text" name="quantity">
-      
-      <input type="submit" value="追加">
+      くだもの：
+      <input type="text" name="itemName" />
+      <button type="submit">追加</button>
     </form>
     
     <ul class="table">
       <% items.forEach((item) => { %>
         <li>
           <div class="item-data">
-            <span><%= item.name %></span>
-            <span><%= item.items %></span>
-            <span><%= item.quantity %></span>
+            <span><%= item.fruits %></span>
           </div>
         </li>
       <% }) %>

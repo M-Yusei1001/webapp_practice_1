@@ -16,8 +16,11 @@
     <ul class="table">
       <% items.forEach((item) => { %>
         <li>
-          <div class="item-data">
-            <span><%= item.fruits %></span>
+          <div class="itemData">
+            <form action="/delete/<%= item.id %>" method="post">
+              <%= item.fruits %>
+              <button type="submit">削除</button>
+            </form>
           </div>
         </li>
       <% }) %>

@@ -2,29 +2,33 @@
 <html>
   <head>
     <title>ToDoリスト</title>
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/memo_app_stylesheet.css">
   </head>
 
   <body>
-    <h1>ToDoリスト</h1>
-    <form action="/create" method="post">
-      くだもの：
-      <input type="text" name="itemName" />
-      <button type="submit">追加</button>
-    </form>
-    
-    <ul class="table">
-      <% items.forEach((item) => { %>
-        <li>
-          <div class="itemData">
-            <form action="/delete/<%= item.id %>" method="post">
-              <%= item.fruits %>
-              <button type="submit">削除</button>
-            </form>
-          </div>
-        </li>
-      <% }) %>
-    </ul>
+    <div class="wrapper">
+      <div class="content">
+        <h1>ToDoリスト</h1>
+        <form action="/create" method="post">
+          <input type="text" name="itemName" placeholder="アイテムを追加"/>
+          <button type="submit" class="buttonRound">追加</button>
+        </form>
+      
+        <ul class="table">
+          <% items.forEach((item) => { %>
+            <li>
+              <div class="itemData">
+                <form action="/delete/<%= item.id %>" method="post">
+                  <p><%= item.fruits %></p>
+                  <button type="submit" class="buttonRound">削除</button>
+                </form>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>  
+    </div>
 
   </body>
 </html>

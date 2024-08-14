@@ -1,0 +1,32 @@
+$bgcolor: rgb(244, 251, 251);
+$headerline: 56px;
+
+.content {
+    background-color: $bgcolor;
+    width: 100%;
+    .content-wrapper {
+        width: 80%;
+        max-width: 1000px;
+        height: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+header {
+    background-color: darken($bgcolor, 20%);
+    .header-wrapper {
+        width: 80%;
+        max-width: 1000px;
+        height: $headerline;
+        margin: 0 auto;
+        position: fixed;
+        z-index: 3;
+        line-height: $headerline;
+        p {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+    }
+}

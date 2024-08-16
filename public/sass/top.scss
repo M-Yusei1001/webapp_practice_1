@@ -1,0 +1,68 @@
+$bgColor: rgb(236, 239, 240);
+$fontColor: rgb(50, 50, 50);
+$headerLine: 56px;
+
+.content {
+    background-color: $bgColor;
+    color: $fontColor;
+    width: 100%;
+    min-width: 600px;
+    .content-img {
+        padding-top: $headerLine;
+        height: 300px;
+        background-image: url("/images/230912_4.jpg");
+        background-size: cover;
+        background-color: darken($bgColor, 10%);
+        h1 {
+            text-align: center;
+            line-height: 300px - $headerLine;
+        }
+    }
+    .content-wrapper {
+        width: 80%;
+        height: 1500px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+header {
+    background-color: darken($bgColor, 40%);
+    color: $fontColor;
+    width: 100%;
+    min-width: 600px;
+    height: $headerLine;
+    position: fixed;
+    z-index: 3;
+    .header-wrapper {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        line-height: $headerLine;
+        .header-left {
+            float: left;
+            p {
+                font-size: 24px;
+                font-weight: bold;
+                display: block;
+            }    
+        }
+        .header-right {
+            float: right;
+            li {
+                float: left;
+                a {
+                    padding: 0 10px;
+                    display: block;
+                    transition: all 0.3s ease-in-out;
+                    font-weight: bold;
+                    color: $fontColor;
+                    &:hover {
+                        background-color: darken($bgColor, 15%);
+                    }
+                }
+            }
+        }
+    }
+}

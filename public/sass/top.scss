@@ -2,31 +2,6 @@ $bgColor: rgb(236, 239, 240);
 $fontColor: rgb(50, 50, 50);
 $headerLine: 56px;
 
-.content {
-    background-color: $bgColor;
-    color: $fontColor;
-    width: 100%;
-    min-width: 600px;
-    .content-img {
-        padding-top: $headerLine;
-        height: 300px;
-        background-image: url("/images/230912_4.jpg");
-        background-size: cover;
-        background-color: darken($bgColor, 10%);
-        h1 {
-            text-align: center;
-            line-height: 300px - $headerLine;
-        }
-    }
-    .content-wrapper {
-        width: 80%;
-        height: 1500px;
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
 header {
     background-color: darken($bgColor, 40%);
     color: $fontColor;
@@ -61,8 +36,38 @@ header {
                     &:hover {
                         background-color: darken($bgColor, 15%);
                     }
+                    .works {
+                        &:hover {
+                            padding-bottom: $headerLine;
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+.content {
+    background-color: $bgColor;
+    color: $fontColor;
+    width: 100%;
+    min-width: 600px;
+    .content-img {
+        padding-top: $headerLine;
+        height: 300px;
+        background-image: url("/images/230912_4.jpg");
+        background-size: cover;
+        background-color: darken($bgColor, 10%);
+        h1 {
+            text-align: center;
+            line-height: 300px - $headerLine;
+        }
+    }
+    .content-wrapper {
+        width: 80%;
+        height: 1500px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
     }
 }

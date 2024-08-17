@@ -1,0 +1,87 @@
+$bgColor: rgb(236, 239, 240);
+$bgColorOpc: rgba(236, 239, 240, 0.4);
+$fontColor: rgb(50, 50, 50);
+$headerLine: 5.6rem;
+
+@mixin header-btn($radius) {
+    background-color: darken($bgColor, 40%);
+    padding: 0 ($radius * 0.8);
+    border-radius: $radius;
+    line-height: $radius * 2;
+    transition: .2s;
+}
+
+header {
+    background-color: $bgColorOpc;
+    color: $fontColor;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 100%;
+    min-width: 60rem;
+    max-width: 198rem;
+    height: $headerLine;
+    position: fixed;
+    z-index: 10;
+    .header-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        line-height: $headerLine;
+        .header-left {
+            float: left;
+            button {
+                font-size: 2rem;
+                padding: 0 2rem;
+                &:hover{
+                    color: white;
+                    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
+                }
+            }    
+        }
+        .header-right {
+            float: right;
+            display: flex;
+            flex-direction: row;
+            .header-works{
+                text-align: right;
+                margin-right: 1rem;
+                button {
+                    padding: 0 1rem;
+                    transition: .2s;
+                    &:hover {
+                        color: white;
+                        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
+                    }
+                }
+                nav {
+                    background-color: $bgColorOpc;
+                    z-index: -1;
+                    overflow: hidden;
+                    text-align: center;
+                    width: 0;
+                    transition: .5s;
+                    animation-direction: reverse;
+                    li {
+                        a {
+                            padding: 0 1rem;
+                            display: flex;
+                            color: $fontColor;
+                            &:hover {
+                                color: white;
+                                text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
+                            }
+                        }
+                    }
+                }
+                nav.open-menu {
+                    width: 100%;
+                }
+            }
+            .header-github {
+                color: white;
+                button {
+                    @include header-btn(2rem);
+                }
+            }
+        }
+    }
+}

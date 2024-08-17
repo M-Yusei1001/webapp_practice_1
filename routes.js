@@ -71,4 +71,8 @@ app.post('/delete/:id', async(req, res) => {
     }
 });
 
+app.get('/playground', (req, res) => {
+    res.render('playground.ejs');
+});
+
 app.listen(3000);

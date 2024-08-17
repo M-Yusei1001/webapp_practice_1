@@ -1,11 +1,34 @@
 <header>
     <div class="header-wrapper">
         <div class="header-left">
-            <p>PORTFOLIO</p>
+            <button onclick="location.href='/'">
+                <i class="fa-solid fa-house"></i>
+            </button>
         </div>
         <div class="header-right">
-            <li><a href="">ABOUT</a></li>
-            <li><a href="/app1">WORKS</a></li>
+            <div class="header-works">
+                <button class="btn-works">WORKS</button>
+                <nav>
+                    <ul>
+                        <li><a href="/app1">memo_app</a></li>
+                        <li><a href="/playground">playground</a></li>
+                    </ul>
+                </nav>    
+            </div>
+            <div class="header-github">
+                <button onclick="location.href='https://github.com/M-Yusei1001'">
+                    <i class="fa-brands fa-github"></i>
+                    <a>GitHub</a>
+                </button>
+            </div>
         </div>
     </div>
 </header>
+<script>
+    const btn = document.querySelector('.btn-works');
+    const nav = document.querySelector('nav');
+
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('open-menu');
+    });
+</script>

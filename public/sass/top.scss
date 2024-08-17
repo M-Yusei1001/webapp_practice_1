@@ -1,68 +1,42 @@
 $bgColor: rgb(236, 239, 240);
 $fontColor: rgb(50, 50, 50);
-$headerLine: 56px;
+$headerLine: 5.6rem;
 
 .content {
     background-color: $bgColor;
     color: $fontColor;
     width: 100%;
-    min-width: 600px;
+    min-width: 60rem;
+    max-width: 1920px;
     .content-img {
         padding-top: $headerLine;
-        height: 300px;
-        background-image: url("/images/230912_4.jpg");
+        height: 30rem;
+        background-image: url("/images/image1.jpg");
         background-size: cover;
         background-color: darken($bgColor, 10%);
-        h1 {
-            text-align: center;
-            line-height: 300px - $headerLine;
+        position: relative;
+        .content-img-text {
+            position: absolute;
+            left: 10%;
+            height: 30rem - $headerLine;
+            top: (30rem - $headerLine) / 2;
+            color: white;
+            text-shadow: 0 0 5rem rgba(0, 0, 0, 0.3); 
+            h1 {
+                font-size: 6.4rem;
+                line-height: 6.4rem;
+            }
+            h3 {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+            }
         }
     }
     .content-wrapper {
-        width: 80%;
-        height: 1500px;
-        max-width: 1000px;
+        width: 90%;
+        height: 150rem;
+        max-width: 100rem;
         margin: 0 auto;
         text-align: center;
-    }
-}
-
-header {
-    background-color: darken($bgColor, 40%);
-    color: $fontColor;
-    width: 100%;
-    min-width: 600px;
-    height: $headerLine;
-    position: fixed;
-    z-index: 3;
-    .header-wrapper {
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-        line-height: $headerLine;
-        .header-left {
-            float: left;
-            p {
-                font-size: 24px;
-                font-weight: bold;
-                display: block;
-            }    
-        }
-        .header-right {
-            float: right;
-            li {
-                float: left;
-                a {
-                    padding: 0 10px;
-                    display: block;
-                    transition: all 0.3s ease-in-out;
-                    font-weight: bold;
-                    color: $fontColor;
-                    &:hover {
-                        background-color: darken($bgColor, 15%);
-                    }
-                }
-            }
-        }
     }
 }

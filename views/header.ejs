@@ -4,13 +4,23 @@
             <p>PORTFOLIO</p>
         </div>
         <div class="header-right">
-            <button class="btn-works">WORKS</button>
-            <nav>
-                <ul>
-                    <li><a href="/app1">memo_app</a></li>
-                    <li><a href="/playground">playground</a></li>
-                </ul>
-            </nav>
+            <div class="header-works">
+                <button class="btn-works">WORKS</button>
+                <nav>
+                    <ul>
+                        <li><a href="/app1">memo_app</a></li>
+                        <li><a href="/playground">playground</a></li>
+                    </ul>
+                </nav>    
+            </div>
         </div>
     </div>
 </header>
+<script>
+    const btn = document.querySelector('.btn-works');
+    const nav = document.querySelector('nav');
+
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('open-menu');
+    });
+</script>

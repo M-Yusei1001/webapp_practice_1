@@ -1,0 +1,58 @@
+header {
+  background-color: #7a8f96;
+  color: rgb(50, 50, 50);
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 100%;
+  min-width: 60rem;
+  max-width: 198rem;
+  height: 5.6rem;
+  position: fixed;
+  z-index: 10;
+}
+header .header-wrapper {
+  width: 80%;
+  max-width: 100rem;
+  margin: 0 auto;
+  line-height: 5.6rem;
+}
+header .header-wrapper .header-left {
+  float: left;
+}
+header .header-wrapper .header-left p {
+  font-size: 3.2rem;
+  display: flex;
+}
+header .header-wrapper .header-right {
+  float: right;
+  transition: all 0.3s ease-in-out;
+}
+header .header-wrapper .header-right .header-works {
+  text-align: right;
+}
+header .header-wrapper .header-right .header-works button {
+  padding: 0 1rem;
+}
+header .header-wrapper .header-right .header-works button:hover {
+  color: white;
+}
+header .header-wrapper .header-right .header-works nav {
+  background-color: #7a8f96;
+  z-index: -1;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+  position: fixed;
+  top: -16.8rem;
+}
+header .header-wrapper .header-right .header-works nav li a {
+  padding: 0 1rem;
+  display: flex;
+  color: rgb(50, 50, 50);
+}
+header .header-wrapper .header-right .header-works nav li a:hover {
+  background-color: #c1cbce;
+}
+header .header-wrapper .header-right .header-works nav.open-menu {
+  top: 5.6rem;
+}/*# sourceMappingURL=header.css.map */

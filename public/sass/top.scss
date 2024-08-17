@@ -1,72 +1,27 @@
 $bgColor: rgb(236, 239, 240);
 $fontColor: rgb(50, 50, 50);
-$headerLine: 56px;
-
-header {
-    background-color: darken($bgColor, 40%);
-    color: $fontColor;
-    width: 100%;
-    min-width: 600px;
-    height: $headerLine;
-    position: fixed;
-    z-index: 3;
-    .header-wrapper {
-        width: 80%;
-        max-width: 1000px;
-        margin: 0 auto;
-        line-height: $headerLine;
-        .header-left {
-            float: left;
-            p {
-                font-size: 24px;
-                font-weight: bold;
-                display: block;
-            }    
-        }
-        .header-right {
-            float: right;
-            li {
-                float: left;
-                a {
-                    padding: 0 10px;
-                    display: block;
-                    transition: all 0.3s ease-in-out;
-                    font-weight: bold;
-                    color: $fontColor;
-                    &:hover {
-                        background-color: darken($bgColor, 15%);
-                    }
-                    .works {
-                        &:hover {
-                            padding-bottom: $headerLine;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+$headerLine: 5.6rem;
 
 .content {
     background-color: $bgColor;
     color: $fontColor;
     width: 100%;
-    min-width: 600px;
+    min-width: 60rem;
     .content-img {
         padding-top: $headerLine;
-        height: 300px;
+        height: 30rem;
         background-image: url("/images/230912_4.jpg");
         background-size: cover;
         background-color: darken($bgColor, 10%);
         h1 {
             text-align: center;
-            line-height: 300px - $headerLine;
+            line-height: 30rem - $headerLine;
         }
     }
     .content-wrapper {
-        width: 80%;
-        height: 1500px;
-        max-width: 1000px;
+        width: 90%;
+        height: 150rem;
+        max-width: 100rem;
         margin: 0 auto;
         text-align: center;
     }

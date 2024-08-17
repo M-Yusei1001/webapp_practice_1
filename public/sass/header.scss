@@ -1,0 +1,64 @@
+$bgColor: rgb(236, 239, 240);
+$fontColor: rgb(50, 50, 50);
+$headerLine: 5.6rem;
+
+header {
+    background-color: darken($bgColor, 40%);
+    color: $fontColor;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 100%;
+    min-width: 60rem;
+    max-width: 198rem;
+    height: $headerLine;
+    position: fixed;
+    z-index: 10;
+    .header-wrapper {
+        width: 80%;
+        max-width: 100rem;
+        margin: 0 auto;
+        line-height: $headerLine;
+        .header-left {
+            float: left;
+            p {
+                font-size: 3.2rem;
+                display: flex;
+            }    
+        }
+        .header-right {
+            float: right;
+            transition: all 0.3s ease-in-out;
+            .header-works{
+                text-align: right;
+                button {
+                    padding: 0 1rem;
+                    &:hover {
+                        color: white;
+                    }
+                }
+                nav {
+                    background-color: darken($bgColor, 40%);
+                    z-index: -1;
+                    overflow: hidden;
+                    text-align: center;
+                    transition: .5s;
+                    position: fixed;
+                    top: -$headerLine * 3;
+                    li {
+                        a {
+                            padding: 0 1rem;
+                            display: flex;
+                            color: $fontColor;
+                            &:hover {
+                                background-color: darken($bgColor, 15%);
+                            }
+                        }
+                    }
+                }
+                nav.open-menu {
+                    top: $headerLine;
+                }
+            }
+        }
+    }
+}

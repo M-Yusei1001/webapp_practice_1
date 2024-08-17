@@ -3,17 +3,31 @@
   color: rgb(50, 50, 50);
   width: 100%;
   min-width: 60rem;
+  max-width: 1920px;
 }
 .content .content-img {
   padding-top: 5.6rem;
   height: 30rem;
-  background-image: url("/images/230912_4.jpg");
+  background-image: url("/images/image1.jpg");
   background-size: cover;
   background-color: #d0d7da;
+  position: relative;
 }
-.content .content-img h1 {
-  text-align: center;
-  line-height: 24.4rem;
+.content .content-img .content-img-text {
+  position: absolute;
+  left: 10%;
+  height: 24.4rem;
+  top: 12.2rem;
+  color: white;
+  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
+}
+.content .content-img .content-img-text h1 {
+  font-size: 6.4rem;
+  line-height: 6.4rem;
+}
+.content .content-img .content-img-text h3 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 .content .content-wrapper {
   width: 90%;

@@ -1,9 +1,18 @@
 $bgColor: rgb(236, 239, 240);
+$bgColorOpc: rgba(236, 239, 240, 0.4);
 $fontColor: rgb(50, 50, 50);
 $headerLine: 5.6rem;
 
-header {
+@mixin header-btn($radius) {
     background-color: darken($bgColor, 40%);
+    padding: 0 ($radius * 0.8);
+    border-radius: $radius;
+    line-height: $radius * 2;
+    transition: .2s;
+}
+
+header {
+    background-color: $bgColorOpc;
     color: $fontColor;
     font-size: 1.6rem;
     font-weight: bold;
@@ -14,49 +23,63 @@ header {
     position: fixed;
     z-index: 10;
     .header-wrapper {
-        width: 80%;
-        max-width: 100rem;
+        width: 90%;
         margin: 0 auto;
         line-height: $headerLine;
         .header-left {
             float: left;
-            p {
-                font-size: 3.2rem;
-                display: flex;
+            button {
+                font-size: 2rem;
+                padding: 0 2rem;
+                &:hover{
+                    color: white;
+                    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
+                }
             }    
         }
         .header-right {
             float: right;
-            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: row;
             .header-works{
                 text-align: right;
+                margin-right: 1rem;
                 button {
                     padding: 0 1rem;
+                    transition: .2s;
                     &:hover {
                         color: white;
+                        text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
                     }
                 }
                 nav {
-                    background-color: darken($bgColor, 40%);
+                    background-color: $bgColorOpc;
                     z-index: -1;
                     overflow: hidden;
                     text-align: center;
+                    width: 0;
                     transition: .5s;
-                    position: fixed;
-                    top: -$headerLine * 3;
+                    animation-direction: reverse;
                     li {
                         a {
                             padding: 0 1rem;
                             display: flex;
                             color: $fontColor;
                             &:hover {
-                                background-color: darken($bgColor, 15%);
+                                color: white;
+                                text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); 
                             }
                         }
                     }
                 }
                 nav.open-menu {
-                    top: $headerLine;
+                    width: 100%;
+                }
+            }
+            .header-github {
+                color: white;
+                button {
+                    @include header-btn(2rem);
                 }
             }
         }

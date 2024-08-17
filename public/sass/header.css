@@ -1,5 +1,5 @@
 header {
-  background-color: #7a8f96;
+  background-color: rgba(236, 239, 240, 0.4);
   color: rgb(50, 50, 50);
   font-size: 1.6rem;
   font-weight: bold;
@@ -11,39 +11,46 @@ header {
   z-index: 10;
 }
 header .header-wrapper {
-  width: 80%;
-  max-width: 100rem;
+  width: 90%;
   margin: 0 auto;
   line-height: 5.6rem;
 }
 header .header-wrapper .header-left {
   float: left;
 }
-header .header-wrapper .header-left p {
-  font-size: 3.2rem;
-  display: flex;
+header .header-wrapper .header-left button {
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+header .header-wrapper .header-left button:hover {
+  color: white;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 header .header-wrapper .header-right {
   float: right;
-  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
 }
 header .header-wrapper .header-right .header-works {
   text-align: right;
+  margin-right: 1rem;
 }
 header .header-wrapper .header-right .header-works button {
   padding: 0 1rem;
+  transition: 0.2s;
 }
 header .header-wrapper .header-right .header-works button:hover {
   color: white;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 header .header-wrapper .header-right .header-works nav {
-  background-color: #7a8f96;
+  background-color: rgba(236, 239, 240, 0.4);
   z-index: -1;
   overflow: hidden;
   text-align: center;
+  width: 0;
   transition: 0.5s;
-  position: fixed;
-  top: -16.8rem;
+  animation-direction: reverse;
 }
 header .header-wrapper .header-right .header-works nav li a {
   padding: 0 1rem;
@@ -51,8 +58,19 @@ header .header-wrapper .header-right .header-works nav li a {
   color: rgb(50, 50, 50);
 }
 header .header-wrapper .header-right .header-works nav li a:hover {
-  background-color: #c1cbce;
+  color: white;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 header .header-wrapper .header-right .header-works nav.open-menu {
-  top: 5.6rem;
+  width: 100%;
+}
+header .header-wrapper .header-right .header-github {
+  color: white;
+}
+header .header-wrapper .header-right .header-github button {
+  background-color: #7a8f96;
+  padding: 0 1.6rem;
+  border-radius: 2rem;
+  line-height: 4rem;
+  transition: 0.2s;
 }/*# sourceMappingURL=header.css.map */

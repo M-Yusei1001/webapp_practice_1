@@ -7,15 +7,29 @@ $headerLine: 5.6rem;
     color: $fontColor;
     width: 100%;
     min-width: 60rem;
+    max-width: 1920px;
     .content-img {
         padding-top: $headerLine;
         height: 30rem;
-        background-image: url("/images/230912_4.jpg");
+        background-image: url("/images/image1.jpg");
         background-size: cover;
         background-color: darken($bgColor, 10%);
-        h1 {
-            text-align: center;
-            line-height: 30rem - $headerLine;
+        position: relative;
+        .content-img-text {
+            position: absolute;
+            left: 10%;
+            height: 30rem - $headerLine;
+            top: (30rem - $headerLine) / 2;
+            color: white;
+            text-shadow: 0 0 5rem rgba(0, 0, 0, 0.3); 
+            h1 {
+                font-size: 6.4rem;
+                line-height: 6.4rem;
+            }
+            h3 {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+            }
         }
     }
     .content-wrapper {
